@@ -155,3 +155,47 @@ dict1['key'][1]
 dict2={10:'ten'}
 dict2[10]
 
+#딕셔너리 데이터 쌍 추가
+dict1={}
+dict1['a']='A'
+dict1['b']='B'
+dict1
+
+dict1[3]=[1,2,3] #주의할 점: 딕셔너리이므로 요소 3번째가 아닌 key임을 인지하고 있어야 한다.
+dict1
+
+dict1[4]={'name':'kei', 'age':35} #이 부분이 의문, 2개의 value를 저장할 수 있는 건가?
+dict1
+
+#딕셔너리 삭제
+#하나의 키만 삭제하는 경우
+del dict1['a']
+
+#모든 데이터를 삭제하는 경우
+dict1.clear()
+dict1
+
+#불리언=> 파이썬에서는 True, False를 사용해야 지 true와 false처럼 첫단어의 시작을 소문자로 적으면 오류 발생.
+a=True #이때는 True가 문자형이지만, 파이썬에서 정해져 있는 파이썬 키워드라서 큰&작은따옴표를 사용하여 적지 않아도 됨.
+a
+type(a)
+
+#if 조건문 => 주의할 점: 들여쓰기를 제대로 안하면 오류 발생. + 다른 언어와 다르게 꼭 쌍점이 필요하다.
+check=True
+if check: #check가 참이라면 실행할 문장을 if문을 통해 설정한 것.
+    print('-'*13) #파이썬에서는 곱셈 연산을 통해 동일한 문장을 여러번 출력할 수 있다.
+    print('check id true')
+    print('-'*13)
+
+#if문의 변수 검사
+check=False
+if check==False:
+    print('-' * 13)
+    print('check id false')
+    print('-' * 13)
+
+#조건문과 다르다면 출력할 문장
+if check!=True:
+    print('-' * 13)
+    print('check id false')
+    print('-' * 13)
