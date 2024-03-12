@@ -60,7 +60,24 @@ print(a)
 # \' 문자 '출력
 # \" 문자 "출력
 
+#리스트
 numbers=[1,2,3,4,5]
 numbers
 
+#리스트 삽입
+numbers.insert(1, 1.5) #리스트 1번 요소에 1.5 넣기
+numbers
+
+#리스트 삭제
+numbers.pop() #맨 마지막 요소를 꺼내고 삭제
+numbers
+
+#리스트 2번째 요소를 꺼내고 삭제
+numbers.pop(2)
+numbers
+
+#리스트 3번째 요소를 꺼내고 변수에 저장
+a=numbers.pop(3)
+numbers
+a #꺼낸 변수가 저장되어 어떤 숫자가 삭제되어 있는 지를 변수를 저장할 수 있음
 
