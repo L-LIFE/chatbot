@@ -199,3 +199,110 @@ if check!=True:
     print('-' * 13)
     print('check id false')
     print('-' * 13)
+
+#조건문에서 사용하는 연산자
+A==B #A와 B가 동일하면 결과는 True
+A!=B #A와 B가 동일하지 않으면 결과는 True
+A and B #A와 B가 모두 True이면 결과는 True
+A or B #A와 B중 하나라도 True이면 결과는 True
+A #A가 True이면 결과는 True
+not A #A가 True가 아니면 결과는 True
+A>B #A가 B보다 크면 결과는 True
+A>=B #A가 B보다 크거나 같으면 결과는 True
+A<B #A가 B보다 작으면 결과는 True
+A<=B #A가 B보다 작거나 같으면 결과는 True
+
+#if문 제어문 사용
+age=15
+if age>=19:
+    print('You are an adult')
+else:
+    print('You are not an adult')
+
+
+#if-elif-else
+score=84
+if score>=90:
+    print('Grade A')
+elif score>=80:
+    print('Grade B')
+elif score>=70:
+    print('Grade C')
+else:
+    print('Grade D')
+
+#구간 별로 조건문 생성
+dist=300
+if dist>0 and dist<=50: #거리가 0~50일 때 실행
+    print('1000won')
+elif dist>50 and dist<=100: #거리가 51~100일 떄 실행
+    print('2000won')
+else: #거리가 101이상일 때
+    print('Over 3000won')
+
+#while문 : True인 동안 계속 코드를 실행한다.
+#만약 False가 없다면 계속 실행되기 때문에 무한 루프가 돌게 된다. 만약 무한 루프 도는 경우 파이썬은 ctrl+c를 눌러 멈출 수 있다.
+i=1
+while i<=10:
+    print('i=%d'%i) #%d가 i의 값으로 치환되어 반환
+    i=i+1
+
+#이때 문자열 출력 시 숫자 데이터로 치환하는 과정을 함. 이는 문자열 포매팅 기능이라고 한다.
+#문자열 포매터는 변수의 자료형에 맞는 변수 내용을 표현할 수 있는 형식자를 의미함.
+#종료
+%d #10진수 출력
+%x #16진수 출력
+%o #8진수 출력
+%f #실수 출력
+%s #문자열 출력
+
+#사용자의 입력을 받는 무한루프 코드
+while True:
+    print('input number: ')
+    menu=int(input()) #input()은 사용자에게 입력을 받는다는 의미. int(input())이면 int형을 입력 받는 다는 것.
+    if menu==0: break
+    elif menu==1: print('number one')
+    elif menu==99:
+        continue
+    elif menu==2:
+        print('number two')
+    else:
+        print('another number')
+
+#조건을 이용하여 반복적으로 작업을 하면 while문을 수행하고, 요소를 하나씩 꺼내서 사용할 때는 for 반복문을 사용한다.
+#for문을 사용한 리스트 출력
+numbers=[1,2,3,4]
+for i in numbers:
+    print(i)
+
+#for문과 range()함수
+numbers=range(1,6) #1부터 5까지의 숫자가 저장이 된다.
+for n in numbers:
+    print(n)
+
+#여러 개의 변수에 자동으로 대입되는 for문
+coord=[(0,0),(10,15),(20,25)] #x,y를 저장하는 리스트를 출력하는 예제, 루프를 돌 때마다 각 요소가 자동으로 변수 x,y에 대입된다.
+for x,y in coord:
+    print(x,y)
+
+#user딕셔너리의 key만 모아서 dict_keys 객체로 반환하는 예쩨
+user={'name':'Kei', 'age':35, 'nationally':'Korea'}
+user.keys() #dict_keys(['name', 'age', 'nationally']) 결과 값
+
+#딕셔너리의 key리스트 출력
+for k in user.keys():
+    print(k) #어떤 key의 이름을 가지고 있는 지 궁금하면 이 방식을 활용하여 알 수 있음.
+
+#values()함수로 key의 값을 알아내기
+user={'name':'Kei', 'age':35, 'nationally':'Korea'}
+user.values()
+#for문으로 value값을 출력
+for k in user.values():
+    print(k)
+
+#딕셔너리의 items()함수로 key, value 내용을 모두 출력하기
+user={'name':'Kei', 'age':35, 'nationally':'Korea'}
+user.items()
+#반복문으로 출력
+for k,v in user.items():
+    print(k,v) #key와 value값을 나타내기 위해 두가지 값이 출력할 수 있게 구성해줘야 한다.
